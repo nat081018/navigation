@@ -69,7 +69,7 @@ export default class App extends Component {
       todo = this.state.todos.filter((todo) => todo.complete);
     }
     return (
-      <div className="App">
+      <div className="app">
         <h1>Todos list</h1>
         <div className="app__btn-wrapper">
           <button

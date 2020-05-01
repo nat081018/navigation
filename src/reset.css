@@ -163,5 +163,14 @@ hr {
 
 input,
 select {
+  outline: 0;
+  outline-offset: 0;
   vertical-align: middle;
+}
+
+:active,
+:hover,
+:focus {
+  outline: none;
+  outline-offset: 0;
 }

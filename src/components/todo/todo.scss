@@ -13,11 +13,16 @@
   border-radius: 40px;
   @media (max-width: 750px) {
     width: 100%;
+    border-radius: 20px;
+    padding: 0 10px;
+    // line-height: 2rem;
   }
 }
 
 .primary__btn--delete {
   @media (max-width: 750px) {
-    width: 26%;
+    font-size: 10px;
+    width: 28%;
+    margin: 3px;
   }
 }
