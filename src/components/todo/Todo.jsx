@@ -14,7 +14,10 @@ export default (props) => {
         >
           {props.todo.text}
         </div>
-        <button className="primary__btn" onClick={props.deleteTodo}>
+        <button
+          className="primary__btn primary__btn--delete"
+          onClick={props.deleteTodo}
+        >
           delete
         </button>
       </div>

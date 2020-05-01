@@ -6,10 +6,18 @@
   line-height: 3rem;
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  padding: 0 20px;
+  padding: 0 30px;
   margin: 5px;
-  border: 2px solid yellow;
-  width: 70%;
+  border-bottom: 2px solid yellow;
+  width: 89%;
   border-radius: 40px;
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+}
+
+.primary__btn--delete {
+  @media (max-width: 750px) {
+    width: 26%;
+  }
 }

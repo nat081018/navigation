@@ -1,0 +1,41 @@
+h1 {
+  font-size: 3rem;
+  padding: 20px 0;
+}
+.app__btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 750px) {
+    display: block;
+  }
+}
+
+.wrapper__btn--remove {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 750px) {
+    display: block;
+  }
+}
+
+.primary__btn {
+  // display: block;
+  margin: 10px;
+  color: white;
+  line-height: 2rem;
+  width: 26%;
+  background-color: grey;
+  border: 2px solid yellow;
+  border-radius: 20px;
+
+  @media (max-width: 750px) {
+    width: 100%;
+  }
+}
+
+.primary__btn:hover {
+  opacity: 0.6;
+  transform: scale(1.2);
+}

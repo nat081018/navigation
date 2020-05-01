@@ -32,17 +32,20 @@ export default class Form extends Component {
   render() {
     return (
       <div>
-        <h1>Todos list...</h1>
-        <h3>Add todo</h3>
         <form onSubmit={this.hendelSubmit}>
-          <input
-            className="form__input"
-            name="text"
-            value={this.state.text} //получила состояние инпута
-            onChange={this.handelChange}
-          />
-          <button className="primary__btn">Add </button>
-          {/* кнопка срабатывает , потомушто на ней по дефолту submit есть,   можно добавить и клик , пока не вижу смысла , все работает) */}
+          <div className="form__wrapper">
+            <div className="input__wrapper">
+              <input
+                className="form__input"
+                placeholder=" Please, add task! :)"
+                name="text"
+                value={this.state.text} //получила состояние инпута
+                onChange={this.handelChange}
+              />
+            </div>
+            <button className="primary__btn">Add </button>
+            {/* кнопка срабатывает , потомушто на ней по дефолту submit есть,   можно добавить и клик , пока не вижу смысла , все работает) */}
+          </div>
         </form>
       </div>
     );

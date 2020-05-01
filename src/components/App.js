@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./App.css";
+import "./App.scss";
 import Form from "./form/Form.jsx";
 import Todo from "./todo/Todo.jsx";
 
@@ -70,21 +70,8 @@ export default class App extends Component {
     }
     return (
       <div className="App">
-        <Form onSubmit={this.addTodo} />
-        {todo.map((todo) => (
-          <Todo
-            toggleComplite={() => this.toggleComplite(todo.id)}
-            deleteTodo={() => this.hendeleDeleteTodo(todo.id)}
-            id={todo.id}
-            key={todo.id}
-            todo={todo}
-          />
-        ))}
-        <div>
-          You need todo:{" "}
-          {this.state.todos.filter((todo) => !todo.complete).length}
-        </div>
-        <div>
+        <h1>Todos list</h1>
+        <div className="app__btn-wrapper">
           <button
             className="primary__btn"
             onClick={() => {
@@ -109,14 +96,31 @@ export default class App extends Component {
           >
             complete
           </button>
-          <div>
-            {this.state.todos.some((todo) => todo.complete) ? (
-              <button onClick={() => this.hendeleRemoveAllCompleteTodo()}>
-                remove all complete
-              </button>
-            ) : null}
-          </div>
         </div>
+        <div className="wrapper__btn--remove">
+          {this.state.todos.some((todo) => todo.complete) ? (
+            <button
+              className="primary__btn "
+              onClick={() => this.hendeleRemoveAllCompleteTodo()}
+            >
+              remove all complete
+            </button>
+          ) : null}
+        </div>
+        <div>
+          You need todo:{" "}
+          {this.state.todos.filter((todo) => !todo.complete).length}
+        </div>
+        <Form onSubmit={this.addTodo} />
+        {todo.map((todo) => (
+          <Todo
+            toggleComplite={() => this.toggleComplite(todo.id)}
+            deleteTodo={() => this.hendeleDeleteTodo(todo.id)}
+            id={todo.id}
+            key={todo.id}
+            todo={todo}
+          />
+        ))}
       </div>
     );
   }
