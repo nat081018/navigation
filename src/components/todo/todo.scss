@@ -11,6 +11,7 @@
   border-bottom: 2px solid yellow;
   width: 89%;
   border-radius: 40px;
+
   @media (max-width: 750px) {
     width: 100%;
     border-radius: 20px;
@@ -23,6 +24,6 @@
   @media (max-width: 750px) {
     font-size: 10px;
     width: 28%;
-    margin: 3px;
+    margin: 10px 0;
   }
 }
