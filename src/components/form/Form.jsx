@@ -24,6 +24,7 @@ export default class Form extends Component {
       complete: false,
       // для id использовала библиотеку shortid
     });
+
     this.setState({
       text: "",
     });

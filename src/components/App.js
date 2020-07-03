@@ -12,6 +12,7 @@ export default class App extends Component {
   state = {
     todos: [],
     todoShowAll: "all",
+    // complete: false,
   };
   addTodo = (todo) => {
     this.setState({
@@ -44,6 +45,23 @@ export default class App extends Component {
   hendeleDeleteTodo = (id) => {
     this.setState({
       todos: this.state.todos.filter((todo) => todo.id !== id),
+    });
+  };
+
+  hendeleDoneTodo = (id) => {
+    this.setState({
+      todos: this.state.todos.map((todo) => {
+        if (todo.id === id) {
+          return {
+            // можно заменить на ...todo, complete: !todo.complete, просто скопирует все что без изменений, и довавит только одно изменение в complete
+            ...todo,
+            complete: todo.complete,
+          };
+        } else {
+          return todo;
+        }
+      }),
+      // complete: todo.complete,
     });
   };
 

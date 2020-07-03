@@ -14,12 +14,23 @@ export default (props) => {
         >
           {props.todo.text}
         </div>
-        <button
-          className="primary__btn primary__btn--delete"
-          onClick={props.deleteTodo}
-        >
-          delete
-        </button>
+        <div className="btn__wrapper">
+          <button
+            className="primary__btn primary__btn--delete"
+            style={{
+              color: props.todo.complete ? "green" : "",
+            }}
+            onClick={props.toggleComplite}
+          >
+            done!
+          </button>
+          <button
+            className="primary__btn primary__btn--delete"
+            onClick={props.deleteTodo}
+          >
+            delete
+          </button>
+        </div>
       </div>
     </div>
   );
